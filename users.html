@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise dashboard users">
+    <title>Users | Enterprise Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="dashboard.html">Reports</a>
+        <a href="users.html" aria-current="page">Users</a>
+    </nav>
+</header>
+
+<aside aria-label="Sidebar navigation">
+    <h2>Menu</h2>
+
+    <nav aria-label="Sidebar menu">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="dashboard.html">Reports</a></li>
+            <li><a href="users.html" aria-current="page">Users</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main>
+
+    <section aria-labelledby="users-heading">
+        <h1 id="users-heading">Users</h1>
+        <p>Manage registered users.</p>
+    </section>
+
+    <section aria-labelledby="add-user-heading">
+        <h2 id="add-user-heading">Add User</h2>
+
+        <form>
+            <fieldset>
+                <legend>User Information</legend>
+
+                <p>
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        required
+                        minlength="2"
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select a role</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </p>
+
+                <button type="submit">Add User</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section aria-labelledby="user-list-heading">
+        <h2 id="user-list-heading">User List</h2>
+
+        <table>
+            <caption>Registered users</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Arun Kumar</td>
+                    <td>arun@example.com</td>
+                    <td>Developer</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>Priya Devi</td>
+                    <td>priya@example.com</td>
+                    <td>Designer</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>Rahul Raj</td>
+                    <td>rahul@example.com</td>
+                    <td>Manager</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Enterprise Dashboard</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessible Enterprise Dashboard">
+    <title>Enterprise Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Dashboard</a>
+            <a href="dashboard.html">Reports</a>
+            <a href="users.html">Users</a>
+        </nav>
+    </header>
+
+    <aside aria-label="Sidebar navigation">
+        <h2>Menu</h2>
+        <nav aria-label="Sidebar menu">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section aria-labelledby="welcome-heading">
+            <h1 id="welcome-heading">Enterprise Dashboard</h1>
+            <p>Welcome to the accessible dashboard.</p>
+        </section>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">User Search</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Search User</legend>
+
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                        minlength="2"
+                        aria-describedby="username-help"
+                    >
+
+                    <p id="username-help">
+                        Enter at least 2 characters.
+                    </p>
+
+                    <button type="submit">Search</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section aria-labelledby="table-heading">
+            <h2 id="table-heading">User Information</h2>
+
+            <table>
+                <caption>Registered Users</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Arun</td>
+                        <td>Developer</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya</td>
+                        <td>Designer</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <article>
+            <h2>Dashboard Information</h2>
+            <p>
+                This dashboard follows semantic HTML5 and accessibility principles.
+            </p>
+        </article>
+
+        <section aria-labelledby="dialog-heading">
+            <h2 id="dialog-heading">User Actions</h2>
+
+            <button type="button" onclick="document.getElementById('user-dialog').showModal()">
+                Open User Details
+            </button>
+
+            <dialog id="user-dialog" aria-labelledby="dialog-title">
+                <h2 id="dialog-title">User Details</h2>
+                <p>Additional user information is displayed here.</p>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('user-dialog').close()">
+                    Close
+                </button>
+            </dialog>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enterprise Dashboard</p>
+    </footer>
+
+</body>
+</html>

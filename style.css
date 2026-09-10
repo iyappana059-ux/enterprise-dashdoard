@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header nav a {
+    margin-right: 20px;
+}
+
+aside {
+    width: 220px;
+    padding: 20px;
+    float: left;
+    border-right: 1px solid #ccc;
+    min-height: 600px;
+}
+
+main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+section,
+article {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+}
+
+button {
+    padding: 10px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+footer {
+    clear: both;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+}
