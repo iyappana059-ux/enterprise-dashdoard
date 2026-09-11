@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<script>
+    const themeButton = document.getElementById("theme-toggle");
+
+    themeButton.addEventListener("click", function () {
+        const isDark = document.body.getAttribute("data-theme") === "dark";
+
+        if (isDark) {
+            document.body.removeAttribute("data-theme");
+            themeButton.textContent = "🌙 Dark Mode";
+            themeButton.setAttribute("aria-label", "Switch to dark theme");
+        } else {
+            document.body.setAttribute("data-theme", "dark");
+            themeButton.textContent = "☀️ Light Mode";
+            themeButton.setAttribute("aria-label", "Switch to light theme");
+        }
+    });
+</script>
 <body>
 
     <header>
@@ -16,6 +33,9 @@
             <a href="dashboard.html">Reports</a>
             <a href="users.html">Users</a>
         </nav>
+        <button type="button" id="theme-toggle" aria-label="Switch to dark theme">
+    🌙 Dark Mode
+</button>
     </header>
 
     <aside aria-label="Sidebar navigation">
